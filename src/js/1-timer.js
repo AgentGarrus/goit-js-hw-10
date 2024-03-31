@@ -12,6 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const datetimePicker = document.getElementById("datetime-picker");
   const startTimerBtn = document.getElementById("start-timer");
 
+  const currentDate = new Date();
+  const selectedDate = new Date(datetimePicker.value);
+  if (selectedDate > currentDate) {
+    startTimerBtn.disabled = false;
+  } else {
+    startTimerBtn.disabled = true;
+  }
+
   flatpickr(datetimePicker, {
     enableTime: true,
     defaultDate: new Date(),
