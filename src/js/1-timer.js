@@ -50,6 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Success",
           message: "Countdown Timer Finished",
         });
+        iziToast.info({
+          title: "Info",
+          message: "Please reload the page to restart the timer.",
+        });
         return;
       }
 
@@ -65,5 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
 
     startTimerBtn.disabled = true;
+    datetimePicker.disabled = true;
   });
 });
